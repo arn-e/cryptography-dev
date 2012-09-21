@@ -15,7 +15,10 @@ Topics covered to date :
 
 *  Caesar Cipher / Basic Substitution Cipehr
 *  Polyalphabetic Cipher
-*  Character Frequency Analysis (incl. first char in word)
+*  Character Frequency Analysis
+   *  Generates frequency report on string
+   *  Determines substitution padding based on letter frequency 
+   *  "Decode" method to automate iterating through offsets until detected language matches English
 
-blog URL : a-rne.tumblr.com
+URL : a-rne.tumblr.com
 
