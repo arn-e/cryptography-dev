@@ -1,4 +1,4 @@
-##Baby Crypto 
+##Intro Crypto
 ###Basic Cryptography Examples and Work
 
 This repo contains the working code for fairly elementary cryptographic cipher work.
