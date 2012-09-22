@@ -1,4 +1,10 @@
-class BabyCrypto
+require 'whatlanguage'  
+
+class IntroCrypto
+
+  def initialize
+    @gen_char_freq = {"a"=>8.167,"b"=>1.492,"c"=>2.782,"d"=>4.253,"e"=>12.702,"f"=>2.228,"g"=>2.015,"h"=>6.094,"i"=>6.966,"j"=>0.153,"k"=>0.747,"l"=>4.025,"m"=>2.406,"n"=>6.749,"o"=>7.507,"p"=>1.929,"q"=>0.095,"r"=>5.987,"s"=>6.327,"t"=>9.056,"u"=>2.758,"v"=>1.037,"w"=>2.365,"x"=>0.150,"y"=>1.974,"z"=>0.074}
+  end
 
   #supports polyalphabetic keys
   def decrypt(key, value)
@@ -19,7 +25,7 @@ class BabyCrypto
     value.split('').each_with_index do |val, i|
       val.ord >= 97 && val.ord <= 122 ? dist = val.ord - (offset[off_i -1] % 26) : dist = val.ord
       dist < 97 && dist != val.ord ? (encrypted.push (122 - (97 - (dist+1))).chr) : (encrypted.push dist.chr)
-      off_i % (ocffset.length) == 0 ? off_i = 1 : off_i = off_i + 1
+      off_i % (offset.length) == 0 ? off_i = 1 : off_i = off_i + 1
     end
     return encrypted.join
   end
@@ -86,3 +92,5 @@ class BabyCrypto
   end
 
 end
+
+intro_crypto = IntroCrypto.new
